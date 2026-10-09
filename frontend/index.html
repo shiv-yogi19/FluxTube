@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b12">
+  <meta name="description" content="FluxTube - a YouTube downloader starter project">
+  <title>FluxTube | Created By Shiv Yogi</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="splash" class="splash" aria-live="polite">
+    <div class="splash-orb"></div>
+    <div class="splash-name">SHIVTUBE</div>
+    <div class="splash-credit">Created By Shiv Yogi</div>
+  </div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="FluxTube home"><span class="brand-mark">S</span><span>FluxTube</span></a>
+    <span class="credit">Created By Shiv Yogi</span>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow"><span class="live-dot"></span> YOUTUBE MEDIA DOWNLOADER</div>
+      <h1>Your videos.<br><span>Your choice.</span></h1>
+      <p class="sub">Video, audio, or playlist. One clean place to get started.</p>
+    </section>
+
+    <section class="panel">
+      <label for="url">YouTube video or playlist link</label>
+      <div class="url-row">
+        <input id="url" type="url" inputmode="url" placeholder="https://www.youtube.com/watch?v=..." autocomplete="url">
+        <button id="inspect" class="primary">Inspect link <span aria-hidden="true">↗</span></button>
+      </div>
+      <div id="status" class="status" role="status">Checking server readiness…</div>
+      <div id="details" class="details hidden">
+        <div class="media-summary">
+          <img id="thumb" alt="Video thumbnail">
+          <div><h2 id="media-title"></h2><p id="media-meta"></p></div>
+        </div>
+        <div id="playlist-area" class="playlist-area hidden">
+          <div class="playlist-head"><strong>Playlist items</strong><div><button id="select-all" class="text-button">Select all</button><button id="select-none" class="text-button">Clear</button></div></div>
+          <div id="playlist-items" class="playlist-items"></div>
+          <p class="hint">Playlist downloads are limited by the server configuration.</p>
+        </div>
+        <div class="options">
+          <div class="option-group"><label for="mode">Download type</label><select id="mode"><option value="video">Video</option><option value="audio">Audio (MP3)</option></select></div>
+          <div class="option-group"><label for="quality">Video quality</label><select id="quality"><option value="best">Best available</option><option value="1080">Up to 1080p</option><option value="720">Up to 720p</option><option value="480">Up to 480p</option><option value="360">Up to 360p</option></select></div>
+        </div>
+        <button id="download" class="primary full">Download selected media <span aria-hidden="true">↓</span></button>
+      </div>
+    </section>
+    <section class="notes">
+      <div><span class="note-icon">◇</span><strong>Safety-first</strong><p>YouTube links only. No third-party APK needed.</p></div>
+      <div><span class="note-icon">◷</span><strong>Temporary processing</strong><p>Files are stored temporarily on the server and cleaned after the response.</p></div>
+      <div><span class="note-icon">↗</span><strong>Honest status</strong><p>The interface shows errors returned by the actual backend.</p></div>
+    </section>
+    <footer>Use only for media you are authorized to download. Service limits and platform rules apply.</footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
