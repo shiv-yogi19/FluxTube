@@ -1,0 +1,7 @@
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30,<1
+python-multipart>=0.0.9
+# "[default]" also installs yt-dlp-ejs, the solver scripts YouTube extraction needs
+# together with a JavaScript runtime (Deno, installed in the Dockerfile).
+# Keep this line unpinned so every fresh build pulls the newest extractor fixes.
+yt-dlp[default]
